@@ -364,9 +364,9 @@ li {
 
 .card-details > summary {
   cursor: pointer;
-  padding: 0;
   list-style: none;
-  display: inline-block;
+  font-weight: 700;
+  font-size: inherit;
 }
 
 .card-details > summary::-webkit-details-marker {
