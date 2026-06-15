@@ -320,26 +320,26 @@ li {
   line-height: 1.6;
 }
 
-.news-container {
+.card-grid {
   display: grid;
   gap: 1rem;
 }
 
-.story-detail {
+.card-grid .story-detail {
   border: 1px solid var(--line);
   border-radius: 0.8rem;
-  margin-bottom: 0;
+  margin: 0;
   padding: 0;
   background: rgba(9, 14, 24, 0.5);
   overflow: hidden;
   transition: background-color 200ms ease;
 }
 
-.story-detail:hover {
+.card-grid .story-detail:hover {
   background: rgba(9, 14, 24, 0.8);
 }
 
-.story-detail > summary {
+.card-grid .story-detail > summary {
   cursor: pointer;
   padding: 0.9rem 1rem;
   font-weight: 600;
@@ -350,11 +350,11 @@ li {
   transition: color 200ms ease;
 }
 
-.story-detail > summary:hover {
+.card-grid .story-detail > summary:hover {
   color: var(--gold-strong);
 }
 
-.story-detail > summary::marker {
+.card-grid .story-detail > summary::marker {
   color: var(--gold);
 }
 

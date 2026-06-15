@@ -74,7 +74,27 @@ function renderNews(entries) {
     .map((entry) => {
       const title = escapeHtml(entry.title || 'Ohne Titel');
       const date = escapeHtml(formatDate(entry.date || '')); 
-      const body = escapeHtml(entry.body || '');
+      const body = entry.body || '';
+
+      // Check if this is an expandable story
+      if (entry.expandable === 'true') {
+        // Render as expandable details element
+        const bodyHtml = body
+          .split(/\n\n+/)
+          .map(para => `<p>${escapeHtml(para.trim())}</p>`)
+          .join('');
+        
+        return `
+          <details class="story-detail">
+            <summary>${title}</summary>
+            <div class="story-content">
+              ${bodyHtml}
+            </div>
+          </details>
+        `;
+      }
+
+      // Regular card with optional link button
       const link = entry.link
         ? `<a class="btn btn-secondary" href="${escapeHtml(entry.link)}" target="_blank" rel="noopener noreferrer">Mehr</a>`
         : '';
@@ -83,7 +103,7 @@ function renderNews(entries) {
         <article class="card">
           <h3>${title}</h3>
           <p class="meta">${date}</p>
-          <p>${body}</p>
+          <p>${escapeHtml(body)}</p>
           ${link}
         </article>
       `;
