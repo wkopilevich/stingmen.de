@@ -78,19 +78,25 @@ function renderNews(entries) {
 
       // Check if this is an expandable story
       if (entry.expandable === 'true') {
-        // Render as expandable details element
+        // Render as card with inline expandable content (like others)
+        const teaser = escapeHtml(entry.teaser || body.substring(0, 150));
         const bodyHtml = body
           .split(/\n\n+/)
           .map(para => `<p>${escapeHtml(para.trim())}</p>`)
           .join('');
         
         return `
-          <details class="story-detail">
-            <summary>${title}</summary>
-            <div class="story-content">
-              ${bodyHtml}
-            </div>
-          </details>
+          <article class="card">
+            <h3>${title}</h3>
+            <p class="meta">${date}</p>
+            <p>${teaser}</p>
+            <details class="card-details">
+              <summary class="btn btn-secondary">Mehr</summary>
+              <div class="card-details-content">
+                ${bodyHtml}
+              </div>
+            </details>
+          </article>
         `;
       }
 

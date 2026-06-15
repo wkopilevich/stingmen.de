@@ -325,51 +325,67 @@ li {
   gap: 1rem;
 }
 
-.card-grid .story-detail {
+.card {
   border: 1px solid var(--line);
   border-radius: 0.8rem;
-  margin: 0;
-  padding: 0;
+  padding: 1rem;
   background: rgba(9, 14, 24, 0.5);
-  overflow: hidden;
   transition: background-color 200ms ease;
 }
 
-.card-grid .story-detail:hover {
+.card:hover {
   background: rgba(9, 14, 24, 0.8);
 }
 
-.card-grid .story-detail > summary {
-  cursor: pointer;
-  padding: 0.9rem 1rem;
-  font-weight: 600;
+.card h3 {
+  margin: 0 0 0.4rem;
+  font-size: 1.1rem;
   color: var(--text-0);
-  display: flex;
-  align-items: center;
-  user-select: none;
-  transition: color 200ms ease;
 }
 
-.card-grid .story-detail > summary:hover {
-  color: var(--gold-strong);
+.card .meta {
+  margin: 0 0 0.8rem;
+  font-size: 0.9rem;
+  color: var(--text-1);
 }
 
-.card-grid .story-detail > summary::marker {
-  color: var(--gold);
+.card > p:not(.meta) {
+  margin: 0.8rem 0;
+  color: var(--text-1);
+  line-height: 1.6;
 }
 
-.story-content {
-  padding: 0 1rem 1rem;
+.card-details {
+  margin-top: 0.8rem;
+  border: none;
+  padding: 0;
+  background: transparent;
+}
+
+.card-details > summary {
+  cursor: pointer;
+  padding: 0;
+  list-style: none;
+  display: inline-block;
+}
+
+.card-details > summary::-webkit-details-marker {
+  display: none;
+}
+
+.card-details-content {
+  margin-top: 0.8rem;
+  padding-top: 0.8rem;
   border-top: 1px solid var(--line);
   color: var(--text-1);
   line-height: 1.7;
 }
 
-.story-content p {
+.card-details-content p {
   margin: 0.8rem 0;
 }
 
-.story-content p:first-child {
+.card-details-content p:first-child {
   margin-top: 0;
 }
 

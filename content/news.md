@@ -1,7 +1,13 @@
+title: Website-Start in Vorbereitung
+date: 2026-06-09
+link: https://www.youtube.com/@StingmenMusic
+
+Wir arbeiten an unserer neuen Website. Bis zum Launch gibt es aktuelle Clips und Eindruecke auf YouTube.
+---
 title: Wie alles begann - Die Legende
 date: 2026-06-15
 expandable: true
-An einem Sommerabend 2008, kurz nach Konzertbeginn in der Duesseldorfer LTU Arena, begann für uns eine Geschichte, die heute Stingmen heisst. 
+teaser: An einem Sommerabend 2008, kurz nach Konzertbeginn in der Duesseldorfer LTU Arena, begann für uns eine Geschichte, die heute Stingmen heisst.
 
 Warum musste ausgerechnet ich an diesem Abend in einen gottverdammten Stau geraten? Es war genau 20:32 Uhr an jenem Sommerabend 2008, als ich geradewegs auf die Düsseldorfer LTU Arena zufuhr. Der Parkplatz war natürlich überfüllt und mit Flatterbändern abgesperrt. Das konnte mich aber nicht aufhalten. Ich durchbrach mit meinem Auto die Flatterbänder und stellte mein Fahrzeug am Backstage gelegenen Treppenaufgang ab.
 
@@ -14,8 +20,3 @@ In diesem Moment, als ich die ersten Töne von "Synchronicity II" vernahm, stand
 Mit dem unvergleichlichen Gefühl, ein historisches Konzert und gleichzeitig das Ende einer Epoche miterlebt zu haben, machte ich mich tags drauf auf die Suche nach geeigneten Fahnenträgern. Aus Policeman's Sting ging später das heutige Sextett Stingmen hervor. Die neue musikalische Richtung ist seitdem überwiegend auf Stings Soloprojekten ausgerichtet, ohne die alten Hits zu vernachlässigen.
 
 In diesem Sinne: See you on the road.
----
-title: Website-Start in Vorbereitung
-date: 2026-06-09
-link: https://www.youtube.com/@StingmenMusic
-Wir arbeiten an unserer neuen Website. Bis zum Launch gibt es aktuelle Clips und Eindruecke auf YouTube.
