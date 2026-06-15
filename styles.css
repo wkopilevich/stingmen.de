@@ -139,8 +139,8 @@ main {
 
 .hero-banner {
   width: 100%;
-  height: min(48vw, 380px);
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
   display: block;
   border-bottom: 1px solid var(--line);
 }
@@ -529,7 +529,7 @@ li {
 
   .hero {
     display: grid;
-    grid-template-columns: 1.25fr 1fr;
+    grid-template-columns: 1.45fr 0.85fr;
   }
 
   .hero-banner {
