@@ -29,6 +29,20 @@ body {
     linear-gradient(160deg, var(--bg-0) 0%, var(--bg-1) 45%, var(--bg-2) 100%);
 }
 
+a {
+  color: var(--gold-strong);
+  text-decoration: none;
+  transition: opacity 200ms ease;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+a:visited {
+  color: var(--gold);
+}
+
 .background-glow {
   position: fixed;
   inset: auto -12rem -12rem auto;
