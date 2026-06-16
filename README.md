@@ -9,6 +9,9 @@ Statische One-Page Website für die Band Stingmen (GitHub Pages ready).
 - `app.js` – Navigation, Scroll-Effekte, Laden der Markdown-Inhalte (news.md, tour.md)
 - `content/news.md` – News & Stories (Cards oder expandierbare Inhalte)
 - `content/tour.md` – Tourdaten (kommend/vergangen)
+- `content/pictures/` – Quellordner fuer Fotos der Media-Galerie
+- `content/photos.json` – Automatisch erzeugte Fotoliste fuer die Galerie
+- `scripts/generate-photos-json.ps1` – Generator fuer `content/photos.json`
 - `content/Technical-Rider-2-2026.pdf` – Technical Rider für Venues
 - `Stingmen_Banner.jpg` – Hero-Bannerbild
 
@@ -66,6 +69,22 @@ Hinweise:
 - `status`: `upcoming` oder `past`
 - `upcoming` → „Kommende Shows", `past` → „Vergangene Shows"
 - Einträge werden innerhalb Kategorie nach Datum sortiert
+
+### Fotos (`content/pictures` + `content/photos.json`)
+
+Die Media-Sektion laedt Fotos dynamisch aus `content/photos.json`.
+
+Wenn neue Bilder in `content/pictures` abgelegt oder entfernt wurden, bitte die Liste neu erzeugen:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\generate-photos-json.ps1
+```
+
+Hinweise:
+
+- Unterstuetzte Formate: `.jpg`, `.jpeg`, `.png`, `.webp`, `.gif`
+- Sortierung erfolgt automatisch nach Dateidatum (neueste zuerst)
+- Die Galerie zeigt 3 Thumbnails pro Ansicht (groesseres Vorschaubild)
 
 ## Features
 

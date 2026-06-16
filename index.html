@@ -79,10 +79,13 @@
       <div class="media-layout">
         <article>
           <h3>Fotos</h3>
-          <div class="photo-grid">
-            <img src="Stingmen_Banner.jpg" alt="Stingmen Live-Banner" />
-            <img src="content/stingmen_pic_2.jpg" alt="Bandfoto Stingmen" />
-            <img src="content/stingmen_pic_1.jpg" alt="Stingmen auf der Buehne" />
+          <div class="photo-gallery" id="photo-gallery" aria-live="polite">
+            <div class="photo-carousel-controls">
+              <button class="photo-nav" id="photo-prev" type="button" aria-label="Vorherige Fotos">&#8592;</button>
+              <div class="photo-track" id="photo-track" style="--visible-count: 3"></div>
+              <button class="photo-nav" id="photo-next" type="button" aria-label="Naechste Fotos">&#8594;</button>
+            </div>
+            <p class="hint" id="photo-range">Fotos werden geladen...</p>
           </div>
         </article>
         <article>
@@ -94,6 +97,17 @@
         </article>
       </div>
     </section>
+
+    <div class="lightbox" id="photo-lightbox" aria-hidden="true">
+      <div class="lightbox-backdrop" id="lightbox-backdrop"></div>
+      <div class="lightbox-dialog" role="dialog" aria-modal="true" aria-label="Fotoansicht">
+        <button class="lightbox-close" id="lightbox-close" type="button" aria-label="Schliessen">&#10005;</button>
+        <button class="lightbox-nav lightbox-nav-prev" id="lightbox-prev" type="button" aria-label="Vorheriges Bild">&#8592;</button>
+        <img id="lightbox-image" src="" alt="" />
+        <button class="lightbox-nav lightbox-nav-next" id="lightbox-next" type="button" aria-label="Naechstes Bild">&#8594;</button>
+        <p class="lightbox-counter" id="lightbox-counter">1 / 1</p>
+      </div>
+    </div>
 
     <section id="bio" class="section reveal">
       <div class="section-head">
