@@ -139,8 +139,8 @@ function renderTour(entries) {
     const body = escapeHtml(entry.body || '');
     return `
       <article class="tour-item">
-        <h4>${title}</h4>
-        <p class="meta">${date} | ${location}</p>
+        <h4>${location}, ${title}</h4>
+        <p class="meta">am ${date}</p>
         <p>${body}</p>
       </article>
     `;
