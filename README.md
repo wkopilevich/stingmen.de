@@ -101,7 +101,7 @@ Hinweise:
 - **HTML5**: Semantic Markup mit aria-labels
 - **CSS3**: Custom Properties für Theme, Grid/Flexbox Layouts, `object-fit: contain` für vollständige Bildarstellung
 - **JavaScript (Vanilla)**: CRLF-aware Markdown-Parser, Client-seitige Content-Behandlung
-- **GitHub Pages**: Automatisches Publishing via `main` Branch Push
+- **GitHub Pages**: Automatisches Publishing via GitHub Actions Workflow (`.github/workflows/deploy-pages.yml`)
 
 ## Rechtliches
 
