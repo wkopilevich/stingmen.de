@@ -10,10 +10,16 @@ location: Krefeld
 status: upcoming
 Ein Abend mit bekannten Songs und einem ausgedehnten Finale.
 ---
+title: Medienhaus Mülheim
+date: 2026-11-11
+location: Mülheim an der Ruhr
+status: upcoming
+Wir freuen uns auf einen weiteren Auftritt im Medienhaus Mülheim.
+---
 title: Goch
 date: 2026-06-20
 location: Goch
-status: upcoming
+status: past
 Ein Programm worauf man sich freuen kann.
 ---
 title: Buena Ressa Music Club
@@ -39,4 +45,3 @@ date: 2025-03-13
 location: Bottrop
 status: past
 Danke fuer ein fantastisches Publikum und eine energiegeladene Nacht.
-
