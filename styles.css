@@ -367,7 +367,7 @@ li {
   margin: 4vh auto;
   display: grid;
   grid-template-columns: auto 1fr auto;
-  grid-template-rows: auto 1fr auto;
+  grid-template-rows: auto 1fr auto auto;
   align-items: center;
   gap: 0.55rem;
 }
@@ -433,6 +433,23 @@ li {
   margin: 0;
   text-align: center;
   color: var(--gold-strong);
+}
+
+.lightbox-download {
+  grid-column: 1 / -1;
+  grid-row: 4;
+  justify-self: center;
+  padding: 0.35rem 0.9rem;
+  border: 1px solid var(--gold);
+  border-radius: 999px;
+  background: rgba(226, 178, 74, 0.14);
+  color: var(--gold-strong);
+  font-size: 0.85rem;
+  text-decoration: none;
+}
+
+.lightbox-download:hover {
+  background: rgba(226, 178, 74, 0.28);
 }
 
 body.lightbox-open {

@@ -171,6 +171,8 @@ function normalizePhotoEntry(entry) {
 
   return {
     src,
+    web: typeof entry?.web === 'string' && entry.web.trim() ? entry.web.trim() : src,
+    thumb: typeof entry?.thumb === 'string' && entry.thumb.trim() ? entry.thumb.trim() : src,
     alt: typeof entry?.alt === 'string' && entry.alt.trim() ? entry.alt.trim() : 'Stingmen Foto'
   };
 }
@@ -206,7 +208,7 @@ function renderGallery() {
       const activeClass = index === galleryState.activeIndex ? ' is-active' : '';
       return `
         <button class="photo-thumb${activeClass}" type="button" data-photo-index="${index}" aria-label="Foto ${index + 1} von ${total}">
-          <img src="${encodeURI(photo.src)}" alt="${escapeHtml(photo.alt)}" loading="lazy" decoding="async" />
+          <img src="${encodeURI(photo.thumb)}" alt="${escapeHtml(photo.alt)}" loading="lazy" decoding="async" />
         </button>
       `;
     })
@@ -220,14 +222,20 @@ function renderGallery() {
 function updateLightboxImage() {
   const image = document.getElementById('lightbox-image');
   const counter = document.getElementById('lightbox-counter');
+  const download = document.getElementById('lightbox-download');
   if (!image || !counter || galleryState.photos.length === 0) {
     return;
   }
 
   const photo = galleryState.photos[galleryState.activeIndex];
-  image.src = encodeURI(photo.src);
+  image.src = encodeURI(photo.web);
   image.alt = photo.alt;
   counter.textContent = `${galleryState.activeIndex + 1} / ${galleryState.photos.length}`;
+
+  if (download) {
+    download.href = encodeURI(photo.src);
+    download.setAttribute('download', photo.src.split('/').pop() || '');
+  }
 }
 
 function openLightbox(index, triggerElement) {
