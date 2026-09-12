@@ -8,3 +8,5 @@ input/
 *.swo
 *~
 .idea/
+scripts/.env
+scripts/flink_export_csv.py
