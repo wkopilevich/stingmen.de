@@ -82,7 +82,7 @@ function renderNews(entries) {
         const teaser = escapeHtml(entry.teaser || body.substring(0, 150));
         const bodyHtml = body
           .split(/\n\n+/)
-          .map(para => `<p>${escapeHtml(para.trim())}</p>`)
+          .map(para => `<p>${escapeHtml(para.trim()).replace(/ {2}\n/g, '<br>')}</p>`)
           .join('');
         
         return `
@@ -519,7 +519,53 @@ function setupActiveNav() {
   sections.forEach((section) => observer.observe(section));
 }
 
+function setupBandSlideshow() {
+  const slideshow = document.getElementById('band-slideshow');
+  if (!slideshow || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    return;
+  }
+
+  const slides = [...slideshow.querySelectorAll('.slide')];
+  const dots = [...slideshow.querySelectorAll('.slideshow-dot')];
+  if (slides.length < 2 || dots.length !== slides.length) {
+    return;
+  }
+
+  let activeIndex = 0;
+  let intervalId = null;
+
+  const showSlide = (index) => {
+    activeIndex = (index + slides.length) % slides.length;
+    slides.forEach((slide, slideIndex) => slide.classList.toggle('is-active', slideIndex === activeIndex));
+    dots.forEach((dot, dotIndex) => {
+      const isActive = dotIndex === activeIndex;
+      dot.classList.toggle('is-active', isActive);
+      dot.setAttribute('aria-selected', String(isActive));
+    });
+  };
+
+  const start = () => {
+    if (intervalId === null) {
+      intervalId = window.setInterval(() => showSlide(activeIndex + 1), 5000);
+    }
+  };
+
+  const stop = () => {
+    window.clearInterval(intervalId);
+    intervalId = null;
+  };
+
+  dots.forEach((dot, index) => dot.addEventListener('click', () => showSlide(index)));
+  slideshow.addEventListener('mouseenter', stop);
+  slideshow.addEventListener('mouseleave', start);
+  slideshow.addEventListener('focusin', stop);
+  slideshow.addEventListener('focusout', () => window.setTimeout(start, 0));
+
+  start();
+}
+
 loadContent();
 setupRevealObserver();
 setupActiveNav();
 setupPhotoGallery();
+setupBandSlideshow();

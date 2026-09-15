@@ -16,9 +16,9 @@ location: Mülheim an der Ruhr
 status: upcoming
 Wir freuen uns auf einen weiteren Auftritt im Medienhaus Mülheim.
 ---
-title: Goch
+title: Evers
 date: 2026-06-20
-location: Goch
+location: Goch-Hommersum
 status: past
 Ein Programm worauf man sich freuen kann.
 ---
