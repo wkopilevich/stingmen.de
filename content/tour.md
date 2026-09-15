@@ -4,7 +4,7 @@ location: Duisburg
 status: upcoming
 Wir spielen die groessten Sting- und Police-Hits in voller Besetzung.
 ---
-title: Zum Schlauen Fuchs
+title: Zur Krone
 date: 2026-09-19
 location: Krefeld
 status: upcoming
@@ -20,7 +20,7 @@ title: Evers
 date: 2026-06-20
 location: Goch-Hommersum
 status: past
-Ein Programm worauf man sich freuen kann.
+Ein Programm worauf man sich freuen konnte.
 ---
 title: Buena Ressa Music Club
 date: 2025-04-25
